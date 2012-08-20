@@ -14,7 +14,6 @@ class GPano {
 	}
 	
 	public function __toString() {
-		
 		$location = new stdClass();
 		$location->pano = $this->id;
 		$location->description = $this->desc;
@@ -40,14 +39,9 @@ class GPano {
 	}
 	
 	private function getTilesJsObj() {
-		$tiles = new stdClass();
-		$tiles->tileSize = 'new google.maps.Size(200, 149)';
-		$tiles->worldSize = 'new google.maps.Size(800, 596)';
-		$tiles->centerHeading = $this->heading;
-		$tiles->getTileUrl = 'getTncPanoramaTileUrl';
 		
-		// return $tiles;
-		return sprintf("{ tileSize: new google.maps.Size(200, 149), worldSize: new google.maps.Size(800, 596), centerHeading: %d, getTileUrl: getTncPanoramaTileUrl }", $this->heading);
+		return sprintf("{ tileSize: new google.maps.Size(200, 149), worldSize: new google.maps.Size(800, 596), 
+			centerHeading: %d, getTileUrl: getTncPanoramaTileUrl }", $this->heading);
 	}
 	
 }
