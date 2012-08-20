@@ -9,6 +9,7 @@ require_once 'data.php';
 		<title>Explore The NetCircle office</title>
 		<meta charset="utf-8">
 		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script src="tnc.js"></script>
 		<script>
 			var panos = {
 		<?php foreach ($panos as $pano) :
@@ -17,8 +18,6 @@ require_once 'data.php';
 			__: null
 			}
 		</script>
-		<!-- script src="panos.js"></script -->
-		<script src="tnc.js"></script>
 		<script>
 			google.maps.event.addDomListener(window, 'load', init);
 		</script>

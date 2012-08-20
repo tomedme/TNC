@@ -18,6 +18,6 @@ function getTncPanorama(pano, zoom, tileX, tileY) {
 
 function getTncPanoramaTileUrl(pano, zoom, tileX, tileY) {
 	// zoom 3, 4, 5
-	console.log( '/img/' + pano +'/'+ zoom +'-'+ tileX +'-'+ tileY +'.jpg' );
+	// console.log( '/img/' + pano +'/'+ zoom +'-'+ tileX +'-'+ tileY +'.jpg' );
 	return '/img/'+ pano +'/photo.jpg';
 }
