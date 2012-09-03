@@ -40,7 +40,7 @@ class GPano {
 	
 	private function getTilesJsObj() {
 		
-		return sprintf("{ tileSize: new google.maps.Size(200, 149), worldSize: new google.maps.Size(800, 596), 
+		return sprintf("{ tileSize: new google.maps.Size(200, 200), worldSize: new google.maps.Size(4000, 2000), 
 			centerHeading: %d, getTileUrl: getTncPanoramaTileUrl }", $this->heading);
 	}
 	

@@ -29,7 +29,8 @@ require_once 'data.php';
 		function getTncPanoramaTileUrl(pano, zoom, tileX, tileY) {
 			// zoom 3, 4, 5
 			// console.log( '/img/' + pano +'/'+ zoom +'-'+ tileX +'-'+ tileY +'.jpg' );
-			return '/img/'+ pano +'/photo.jpg';
+			// return '/img/'+ pano +'/photo.jpg';
+      return '/img/' + pano +'/'+ zoom +'-'+ tileX +'-'+ tileY +'.jpg';
 		}
 		</script>
 		<script>
@@ -45,6 +46,6 @@ require_once 'data.php';
 		</script>
 	</head>
 	<body>
-		<div id="pano_canvas" style="width: 1000px; height: 600px"></div>
+		<div id="pano_canvas" style="width: 1000px; height: 500px;"></div>
 	</body>
 </html>
