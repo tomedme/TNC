@@ -6,11 +6,11 @@ class GPano {
 	public $links;
 	public $tiles;
 	
-	public function __construct($id, $desc, $links, $heading = 0) {
+	public function __construct($id, $desc, $links, $origin = 0) {
 		$this->id = 'p'. $id;
 		$this->desc = $desc;
 		$this->links = $links;
-		$this->heading = $heading;
+		$this->origin = $origin;
 	}
 	
 	public function __toString() {
@@ -40,8 +40,8 @@ class GPano {
 	
 	private function getTilesJsObj() {
 		
-		return sprintf("{ tileSize: new google.maps.Size(200, 200), worldSize: new google.maps.Size(4000, 2000), 
-			centerHeading: %d, getTileUrl: getTncPanoramaTileUrl }", $this->heading);
+		return sprintf("{ tileSize: new google.maps.Size(200, 200), worldSize: new google.maps.Size(4000, 2000), ".
+			"centerHeading: %d, getTileUrl: getTncPanoramaTileUrl }", $this->origin);
 	}
 	
 }
