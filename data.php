@@ -84,7 +84,7 @@ $links[TNC_attic_2] = array(TNC_g_project => array(163, 'G Project'));
 
 // panos
 $panos = array();
-$panos[] = new GPano(TNC_entrance, 'Entrance', $links[TNC_entrance]);
+$panos[] = new GPano(TNC_entrance, 'Entrance', $links[TNC_entrance], 180);
 $panos[] = new GPano(TNC_reception, 'Reception', $links[TNC_reception]);
 $panos[] = new GPano(TNC_conference, 'Conference room', $links[TNC_conference]);
 $panos[] = new GPano(TNC_finance, 'HR & Finance', $links[TNC_finance]);

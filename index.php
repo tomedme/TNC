@@ -3,6 +3,8 @@
 require_once 'gpano.class.php';
 require_once 'data.php';
 
+$id = 'tnc_view';
+
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +12,7 @@ require_once 'data.php';
 	<meta charset="utf-8">
 	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	<style type="text/css">
-	#tnc_view { border: 1px solid #333; height: 500px; margin: 20px auto; width: 1000px; }
+	#<?php echo $id; ?> { border: 1px solid #333; height: 600px; margin: 20px auto; width: 1000px; }
 	</style>
 	<script>
 	function init() {
@@ -18,11 +20,11 @@ require_once 'data.php';
 			pano: 'p0',
 			visible: true,
 			panoProvider: getTncPanorama, 
-			pov: { heading: 190, pitch: -10, zoom : 1 }
+			pov: { heading: 255, pitch: 10, zoom : 1 }
 		};
 		
 		var panorama = new google.maps.StreetViewPanorama(
-			document.getElementById('pano_canvas'), panoOptions);
+			document.getElementById('<?php echo $id; ?>'), panoOptions);
 	}
 	
 	function getTncPanorama(pano, zoom, tileX, tileY) {
@@ -46,10 +48,12 @@ require_once 'data.php';
 	<script>
 	try {
 		google.maps.event.addDomListener(window, 'load', init);
-	} catch(e) {}
+	} catch(e) {
+		alert('Something went wrong, try refreshing the page...');
+	}
 	</script>
 </head>
 <body>
-	<div id="tnc_view"></div>
+	<div id="<?php echo $id; ?>"></div>
 </body>
 </html>
