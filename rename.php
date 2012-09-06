@@ -24,7 +24,7 @@ $tile_i = 0;
 for ($y = 0, $h_max = $world_size_h / $tile_h; $y < $h_max; $y++) {
   for ($x = 0, $w_max = $world_size_w / $tile_w; $x < $w_max; $x++) {
     
-    echo "tile $tile_i: Z:$z X:$x - Y:$y \n";
+    // echo "tile $tile_i: Z:$z X:$x - Y:$y \n";
 
     rename("img/$p$tile_i.jpg", "img/$pano/$z-$x-$y.jpg");
 
