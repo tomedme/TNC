@@ -28,9 +28,9 @@ $links = array();
 $links[TNC_entrance] = array(TNC_reception => array(206, 'Reception'));
 
 $links[TNC_reception] = array(TNC_entrance => array(20, 'Exit'), 
-                              TNC_conference => array(144, 'Conference room'), 
-                              TNC_games_1 => array(162, 'Upstairs'), 
-                              TNC_corridor_1 => array(178, 'Corridor'), 
+                              TNC_conference => array(134, 'Conference room'), 
+                              // TNC_games_1 => array(162, 'Upstairs'), 
+                              TNC_corridor_1 => array(188, 'Corridor'), 
                               TNC_finance => array(258, 'HR & Finance'));
 
 $links[TNC_conference] = array(TNC_reception => array(324, 'Reception'), 
@@ -53,14 +53,14 @@ $links[TNC_library] = array(TNC_corridor_1 => array(238, 'Corridor'));
 $links[TNC_restrooms] = array(TNC_corridor_1 => array(291, 'Corridor'), 
                               TNC_kitchen_1 => array(193, 'Kitchen'));
 
-$links[TNC_kitchen_1] = array(TNC_restrooms => array(13, 'Restrooms'), 
-                              TNC_kitchen_2 => array(9, 'Kitchen'), 
+$links[TNC_kitchen_1] = array(TNC_restrooms => array(70, 'Restrooms'), 
+                              TNC_kitchen_2 => array(345, 'Kitchen'), 
                               TNC_corridor_1 => array(23, 'Corridor'));
 
 $links[TNC_kitchen_2] = array(TNC_kitchen_1 => array(189, 'Kitchen'));
 
 $links[TNC_games_1] = array(TNC_reception => array(342, 'Downstairs'), 
-                            TNC_fishbowl => array(350, 'The fishbowl'), 
+                            TNC_fishbowl => array(355, 'The fishbowl'), 
                             TNC_p_project => array(273, 'P Project'));
 
 $links[TNC_fishbowl] = array(TNC_games_1 => array(170, 'Chill out area'));
@@ -85,15 +85,15 @@ $links[TNC_attic_2] = array(TNC_g_project => array(163, 'G Project'));
 // panos
 $panos = array();
 $panos[] = new GPano(TNC_entrance, 'Entrance', $links[TNC_entrance], 180);
-$panos[] = new GPano(TNC_reception, 'Reception', $links[TNC_reception], 320);
-$panos[] = new GPano(TNC_conference, 'Conference room', $links[TNC_conference]);
-$panos[] = new GPano(TNC_finance, 'HR & Finance', $links[TNC_finance]);
-$panos[] = new GPano(TNC_it, 'IT Support', $links[TNC_it]);
+$panos[] = new GPano(TNC_reception, 'Reception', $links[TNC_reception], 335);
+$panos[] = new GPano(TNC_conference, 'Conference room', $links[TNC_conference], 250);
+$panos[] = new GPano(TNC_finance, 'HR & Finance', $links[TNC_finance], 65);
+$panos[] = new GPano(TNC_it, 'IT Support', $links[TNC_it], 65);
 $panos[] = new GPano(TNC_corridor_1, 'Corridor', $links[TNC_corridor_1], 35);
-$panos[] = new GPano(TNC_library, 'Library', $links[TNC_library]);
-$panos[] = new GPano(TNC_restrooms, 'Restrooms', $links[TNC_restrooms]);
+$panos[] = new GPano(TNC_library, 'Library', $links[TNC_library], 260);
+$panos[] = new GPano(TNC_restrooms, 'Restrooms', $links[TNC_restrooms], 335);
 $panos[] = new GPano(TNC_kitchen_1, 'Kitchen', $links[TNC_kitchen_1], 15);
-$panos[] = new GPano(TNC_kitchen_2, 'Kitchen', $links[TNC_kitchen_2], 330);
+$panos[] = new GPano(TNC_kitchen_2, 'Kitchen', $links[TNC_kitchen_2], 335);
 $panos[] = new GPano(TNC_games_1, 'Chill out area', $links[TNC_games_1]);
 $panos[] = new GPano(TNC_fishbowl, 'The fishbowl', $links[TNC_fishbowl]);
 $panos[] = new GPano(TNC_p_project, 'P Project', $links[TNC_p_project]);
