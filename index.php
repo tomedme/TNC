@@ -8,9 +8,9 @@ $id = 'tnc_view';
 ?><!DOCTYPE html>
 <html>
 <head>
-	<title>Explore The NetCircle office</title>
+	<title>Explore The NetCircle's office</title>
 	<meta charset="utf-8">
-	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyCu1gy9E7ZrfZRZkvjPKI0KVRQG2dYCmqQ"></script>
 	<style type="text/css">
 	#<?php echo $id; ?> { border: 1px solid #333; height: 600px; margin: 20px auto; width: 1000px; }
 	</style>
@@ -55,5 +55,16 @@ $id = 'tnc_view';
 </head>
 <body>
 	<div id="<?php echo $id; ?>"></div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2723570-1']);
+  _gaq.push(['_setDomainName', 'tnc.binlid.net']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 </body>
 </html>
